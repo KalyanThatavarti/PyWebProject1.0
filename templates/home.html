@@ -58,20 +58,40 @@ points of each industry. We can staff any type of contracts: Contract, Contract-
 senior level positions. We never flood with unwanted resumes; we source only qualified resumes that fit your
 business needs. Specialized in IT staffing.
 </p>
-<p>
-    {{jobs}}
-</p>
+    <h3 class="text-center mt-4 mb-2">Open Positions</h3>
+<div style="margin-bottom:50px;">
+
+    {% for job in jobs %}
+
+
+                <div class="border-bottom row border-black" style="margin-bottom:16px;padding-bottom:8px;">
+                    <div  class="col-9" >
+                   <h5 style="margin-bottom:8px;"> {{job['title']}}</h5>
+                    <div><b>Location: {{job['location']}}</b></div>
+                    <div><b>Salary: {{job['salary']}}</b></div>
+
+                    </div>
+                    <div class="col-3 mt-4" >
+                        <button type="button" class="btn btn-outline-primary">Apply</button>
+                    </div>
+                </div>
+
+
+
+    {% endfor %}
+
+</div>
 
         </div>
 
 
-<div style="text-align:center;" >
-    <button type="button" class="btn btn-primary btn-lg" class="text-left mt-4 mb-2"> Contact Us</button>
-   <b>
-       <p class="text-left mt-2 mb-2" style="font-size: 12px; color: rbg(100,100,100);"> Copyrights@2023 IT Leads Consulting</p>
-   </b>
-</div>
-    </body>
+    <div style="text-align:center;" >
+        <button type="button" class="btn btn-primary btn-lg" class="text-left mt-4 mb-2"> Contact Us</button>
+       <b>
+           <p class="text-left mt-2 mb-2" style="font-size: 12px; color: rbg(100,100,100);"> Copyrights@2023 IT Leads Consulting</p>
+       </b>
+    </div>
+            </body>
 </div>
 
 </html>
