@@ -40,5 +40,9 @@ def hello_world():
 def services():
    return render_template('services.html', jobs=JOBS)
 
+@app.route("/technologies")
+def technologies():
+   return render_template('technologies.html', jobs=JOBS)
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
