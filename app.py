@@ -44,5 +44,11 @@ def services():
 def technologies():
    return render_template('technologies.html', jobs=JOBS)
 
+
+@app.route("/verticlals")
+def verticals():
+   return render_template('verticles.html', jobs=JOBS)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
