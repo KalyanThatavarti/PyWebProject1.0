@@ -36,8 +36,22 @@
 
         #bottom_space {
 
-                 padding-bottom: 400px;
+                 padding-bottom: 600px;
                       }
+        .vl {
+                    border-left: 4px solid green;
+                    height: 300px;
+                    position: absolute;
+                    left: 50%;
+                }
+
+        .column {
+                  float: left;
+                  width: 33.33%;
+                  padding: 80px;
+
+
+                }
 
 </style>
 </head>
@@ -47,91 +61,110 @@
     <div id="container" class="row gx-5" >
         <body>
          {% include 'nav.html' %}
-<h3 class="text-center mt-2 mb-2">Vertical Domains</h3>
-         <div class="row">
-             <div class="col-md-8">
+                                    <h3 class="text-center mt-2 mb-2">Domain Verticals</h3>
+
+         <p class="text-left mt-2 mb-2">
+
+                Domain verticals in the IT industry refer to specific sectors or industries in which technology solutions and services
+             are applied to address unique challenges and meet specialized needs. These domain verticals span a wide range of sectors,
+             each with its own characteristics, requirements, and opportunities for innovation. Here are some key
+             domain verticals in the IT industry:
+
+         </p>
+
+         <h6 class="text-left mt-2 mb-1">Healthcare:</h6>
+            <p class="text-left mt-1 mb-2">
+                            The healthcare domain vertical focuses on leveraging technology to improve patient care,
+                enhance medical diagnosis and treatment, streamline administrative processes, and ensure compliance
+                with regulatory standards. IT solutions in healthcare include electronic health records (EHR),
+                telemedicine, medical imaging systems, and healthcare analytics.
+
+            </p>
+
+                  <h6 class="text-left mt-2 mb-1">Finance:</h6>
+            <p class="text-left mt-1 mb-2">
+                            The finance domain vertical encompasses banking, insurance, investment management, and other
+                financial services sectors. IT solutions in finance aim to enhance security, facilitate online
+                transactions, automate processes, analyze financial data, and provide personalized customer experiences.
+                Fintech innovations such as mobile banking, robo-advisors, and blockchain technology are transforming
+                the financial industry.
+            </p>
+
+                  <h6 class="text-left mt-2 mb-1">Retail:</h6>
+            <p class="text-left mt-1 mb-2">
+                The retail domain vertical involves the use of technology to optimize retail operations, improve customer
+                engagement,and drive sales. Retail IT solutions include point-of-sale (POS) systems, inventory management software,
+                e-commerce platforms, customer relationship management (CRM) systems, and personalized marketing tools
+            </p>
+                  <h6 class="text-left mt-2 mb-1">Government:</h6>
+            <p class="text-left mt-1 mb-2">
+                The government domain vertical encompasses various levels of government (local, state, and federal)
+                and involves the use of technology to deliver public services, improve governance, enhance security,
+                and promote citizen engagement. Government IT solutions include e-government portals, digital identity
+                systems, public safety and security systems, and smart city initiatives.
+            </p>
+                  <h6 class="text-left mt-2 mb-1">Education:</h6>
+            <p class="text-left mt-1 mb-2">
+                The education domain vertical involves the use of technology to enhance learning experiences, facilitate
+                remote education, manage academic resources, and support administrative functions. Educational IT solutions
+                include learning management systems (LMS), online course platforms, virtual classrooms, student information
+                systems (SIS), and educational analytics tools.
+            </p>
+                <h6 class="text-left mt-2 mb-1">Manufacturing:</h6>
+            <p class="text-left mt-1 mb-2">
+                The manufacturing domain vertical focuses on applying technology to automate production processes,
+                improve supply chain management, enhance product quality, and enable predictive maintenance. Manufacturing
+                IT solutions include enterprise resource planning (ERP) systems, industrial automation systems, supply
+                chain management (SCM) software, and Internet of Things (IoT) devices for monitoring and control.
+            </p>
+                <h6 class="text-left mt-2 mb-1">Energy and Utilities:</h6>
+            <p class="text-left mt-1 mb-1">
+                The energy and utilities domain vertical focuses on leveraging technology to optimize energy production,
+                distribution, and consumption, improve resource management, and enhance environmental sustainability.
+                T solutions in energy and utilities include smart grid systems, energy management software, asset
+                performance management (APM) systems, and renewable energy technologies.
+            </p>
+        <div class="row">
+                                <div class="column">
+                                            <p class="text-left mt-1 mb-2">
+                                         <ul>
+                                                        <li><p class="text-left mt-2 mb-2"> Banking</p></li>
+                                                        <li><p class="text-left mt-2 mb-2">Finance</p></li>
+                                                        <li><p class="text-left mt-2 mb-2">Insurance</p></li>
+                                                        <li><p class="text-left mt-2 mb-2">Healthcare</p></li>
+                                                        <li><p class="text-left mt-2 mb-2">Entertainment</p></li>
+
+                                         </ul>
+                                            </p>
+                                </div>
+
+                                 <div class="column">
+                                                             <div class="vl"></div>
+
+                                 </div>
+                                    <div class="column">
+                                                <p class="text-left mt-2 mb-2">
+                                                 <ul>
+                                                                <li><p class="text-left mt-2 mb-2">Retail</p></li>
+                                                                <li><p class="text-left mt-2 mb-2">Utilities</p></li>
+                                                                <li><p class="text-left mt-2 mb-2">Telecommunications</p></li>
+                                                                <li><p class="text-left mt-2 mb-2">Manufacturing</p></li>
+                                                                <li><p class="text-left mt-2 mb-2">Hospitality</p></li>
+                                                 </ul>
+                                                                    </p>
 
 
-
-
-                                  <h5 class="text-left mt-2 mb-2">Front End Development:</h5>
-
-                    <p class="text-left mt-2 mb-2">
-                 <ul>
-                                <li><p class="text-left mt-2 mb-2"> Banking</p></li>
-                                <li><p class="text-left mt-2 mb-2">Finance</p></li>
-                                <li><p class="text-left mt-2 mb-2">Insurance</p></li>
-                                <li><p class="text-left mt-2 mb-2">Healthcare</p></li>
-
-                 </ul>
-                    </p>
-
-
-
-
-
-             </div>
-
-
-
-             <div class="col-md-2 d-none d-md-block">
-
-                     <h5 class="text-left mt-2 mb-2">Back End Development:</h5>
-
-                                    <p class="text-left mt-2 mb-2">
-                 <ul>
-                                <li><p class="text-left mt-2 mb-2">Node.js</p></li>
-                                <li><p class="text-left mt-2 mb-2">Express.js</p></li>
-                                <li><p class="text-left mt-2 mb-2">Python/Flask</p></li>
-                                <li><p class="text-left mt-2 mb-2">Ruby on Rails</p></li>
-
-                 </ul>
-                                    </p>
-
-
-                                      <h5 class="text-left mt-2 mb-2">CRM Staffing:</h5>
-
-                                    <p class="text-left mt-2 mb-2">
-                 <ul>
-                                <li><p class="text-left mt-2 mb-2">Zoho CRM</p></li>
-                                <li><p class="text-left mt-2 mb-2">Salesforce</p></li>
-                                <li><p class="text-left mt-2 mb-2">Microsoft Dynamics 365</p></li>
-                                <li><p class="text-left mt-2 mb-2">Oracle CRM</p></li>
-
-                 </ul>
-                                    </p>
-
-
-                                      <h5 class="text-left mt-2 mb-2">BI Tools:</h5>
-
-                                    <p class="text-left mt-2 mb-2">
-                 <ul>
-                                <li><p class="text-left mt-2 mb-2">QlikView</p></li>
-                                <li><p class="text-left mt-2 mb-2"></p>Tableau</li>
-                                <li><p class="text-left mt-2 mb-2">Microsoft Power BI</p></li>
-                                <li><p class="text-left mt-2 mb-2">MicroStrategy</p></li>
-                                <li><p class="text-left mt-2 mb-2">SAP BusinessObjects</p></li>
-
-                 </ul>
-                                    </p>
-
-
-
-
-
-             </div>
-
-
-
-
-         </div>
-
+                                        <div>
         </div>
-<div id="bottom_space"></div>
+
+
 
             </body>
+        </div>
+
      {% include 'footer.html' %}
 
-</div>
 
+
+</div>
 </html>
