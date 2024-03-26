@@ -45,9 +45,9 @@ def technologies():
    return render_template('technologies.html', jobs=JOBS)
 
 
-@app.route("/verticlals")
+@app.route("/verticals")
 def verticals():
-   return render_template('verticles.html', jobs=JOBS)
+   return render_template('verticals.html', jobs=JOBS)
 
 
 if __name__ == "__main__":
