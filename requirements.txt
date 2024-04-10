@@ -2,3 +2,4 @@ Flask~=3.0.2
 Gunicorn
 SQLAlchemy~=2.0.29
 pymysql
+python-dotenv
