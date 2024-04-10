@@ -1,13 +1,26 @@
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv, dotenv_values
+import os
+
+load_dotenv()
+user = os.getenv("USER")
+password = os.getenv("PASSWORD")
+
+# user is defined in .env file as database connection string. make sure user id, password and database are secret and
+# should not me checked in to gethub
 
 engine = create_engine(
-    "mysql+pymysql://root:Superman123@pyweb-db.c38c0cqk664a.us-east-2.rds.amazonaws.com/pyweb-db?charset=utf8mb4",
+    user,
     echo=True)
 
-with engine.connect() as conn:
-    result = conn.execute(text("select * from jobs"))
-    column_names = result.keys()
-    result_dicts = []
-    for row in result.all():
-        result_dicts.append(dict(zip(column_names, row)))
-    print(result_dicts)
+print("\n", user)
+print("\n", password)
+
+def load_jobs_from_db():
+    with engine.connect() as conn:
+        result = conn.execute(text("select * from jobs"))
+        column_names = result.keys()
+        jobs = []
+        for row in result.all():
+            jobs.append(dict(zip(column_names, row)))
+        return jobs
