@@ -5,15 +5,12 @@ import os
 load_dotenv()
 user = os.getenv("USER")
 
-
 # user is defined in .env file as database connection string. make sure user id, password and database are secret and
-# should not me checked in to gethub
+# should not be checked in to gethub
 
 engine = create_engine(
     user,
     echo=True)
-
-
 
 
 def load_jobs_from_db():
