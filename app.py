@@ -25,7 +25,7 @@ def verticals():
     return render_template('verticals.html')
 
 
-@app.route("/job/<id>")
+@app.route("/job/<id>", methods=['POST', 'GET'])
 def show_job(id):
     job = load_job_from_db(id)
     if not job:
