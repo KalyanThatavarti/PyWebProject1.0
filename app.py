@@ -9,6 +9,9 @@ def hello_world():
     jobs = load_jobs_from_db()
     return render_template('home.html', jobs=jobs)
 
+@app.route("/sitemap.xml")
+def sitemap_xml():
+    return render_template('sitemap.xml')
 
 @app.route("/services")
 def services():
