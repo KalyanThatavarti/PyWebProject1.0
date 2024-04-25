@@ -47,50 +47,54 @@
 </style>
 </head>
 
-<div class="p-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
 
     <div id="container" class="row gx-5" >
         <body>
-         {% include 'nav.html' %}
 
-            <h3 class="text-center mt-2 mb-2">ITLeads Career</h3>
-                <h5 class="text-left mt-2 4">{{job.title}}</h5>
 
-                    <p class="text-left mt-1 mb-3">
-                        {{job.location}}
-                    </p>
+            <h3 class="text-center mt-2 mb-2">Application Form</h3>
+
             <hr style="height:2px;border-width:0;color:black;background-color:black">
-         <h5 class="text-left mt-2 mb-1">Responsibilities :</h5>
+         <form action="/job/{{job['id']}}/apply" method="post">
+                    <h5 class="text-left mt-2 mb-1">First Name :</h5>
+                    <input type="text" name="First_name" placeholder="Bruce">
 
-                                <ul>
-                                {% for line in job.responsibilities.split("\n") %}
-                                   <li style="margin-left:10%">{{line}}</li>
-                                {% endfor %}
-                                </ul>
+                    <h5 class="text-left mt-2 mb-1">Last Name :</h5>
+                    <input type="text" name="Last_name" placeholder="wayne">
 
-                    <h5 class="text-left mt-2 mb-1">Requirements :</h5>
-                                <ul>
-                                {% for line in job.requirements.split("\n") %}
-                                    <li style="margin-left:10%">{{line}}</li>
-                                {% endfor %}
-                                </ul>
+                    <h5 class="text-left mt-2 mb-1">Email :</h5>
+                    <input type="text" name="email" placeholder="bruce.wayne@gmail.com">
 
-                    <h5 class="text-left mt-4 mb-1">Salary : {{job.currency}} {{job.salary}} </h5>
+                    <h5 class="text-left mt-2 mb-1">Mobile :</h5>
+                    <input type="text" name="mobile" placeholder="+1-999.999.9999">
 
-                    {% include 'application_form.html' %}
+                    <h5 class="text-left mt-2 mb-1">Education :</h5>
+                    <textarea name="education"></textarea>
+
+                    <h5 class="text-left mt-2 mb-1">Work Experience :</h5>
+                    <textarea name="work_experience"></textarea>
+
+                    <h5 class="text-left mt-2 mb-1">Resume URL :</h5>
+                    <textarea name="resume_url"></textarea>
+
+             <div class="mt-4 mb-1">
+                <input type="submit">
+             </div>
+         </form>
+<!--
                         <div class="col-3 mt-4" >
                             <a href="mailto:kalyan.thatavarti?subject=Application%20for%20{{job['title']}}&body=Hello%0D%0A%0D%0AAttached%20is%20my%20resume%20for%20your%20perusal%20for%20{{job['title']}}%20position.%0D%0A%0D%0AName%20%3A%0D%0A%0D%0AMobile%20%3A%0D%0A%0D%0A%0D%0AThanks%0D%0A%0D%0A" type="button" class="btn btn-outline-primary">Apply</a>
                         </div>
-
+-->
 
             <div id="bottom_space"></div>
 
             </body>
 
 
-     {% include 'footer.html' %}
 
-</div>
+
+
         </div>
 
 </html>
