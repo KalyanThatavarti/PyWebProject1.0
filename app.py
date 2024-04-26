@@ -34,10 +34,11 @@ def show_job(id):
     if not job:
         return "Not Found", 404
     return render_template('jobpage.html', job=job)
-@app.route("/job/<id>/apply", methods=['POST'])
+@app.route("/job/<id>/apply", methods=['POST', 'GET'])
 def apply_to_job(id):
     data = request.form
-    return render_template('application_submitted.html', application=data)
+    jobs = load_job_from_db(id)
+    return render_template('application_submitted.html', application=data, jobs=jobs)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
