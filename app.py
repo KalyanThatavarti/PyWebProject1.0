@@ -23,6 +23,10 @@ def technologies():
     return render_template('technologies.html')
 
 
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
+
 @app.route("/verticals")
 def verticals():
     return render_template('verticals.html')
